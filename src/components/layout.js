@@ -14,18 +14,27 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+  query MyQuery {
+    allContentfulNavbar {
+      edges {
+        node {
+          navIcon {
+            file {
+              url
+            }
+          }
+          navItems {
+            items
+          }
         }
       }
     }
+  }
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <>{console.log(data.allContentfulNavbar.edges[0])}
+      <Header siteTitle={'Webstacks Jr Front End Dev Take Home'} icon={data.allContentfulNavbar.edges[0].node.navIcon.file.url} navItems={data.allContentfulNavbar.edges[0].node.navItems.items}/>
       <div style={{ margin: `0 auto`,maxWidth: 960,padding: `0 1.0875rem 1.45rem`,}}>
         <main>{children}</main>
       </div>

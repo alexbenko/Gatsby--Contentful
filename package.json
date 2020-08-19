@@ -33,7 +33,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "setup": "node ./bin/setup.js",
-    "clear-cache":"rm -rf .cache",
+    "clear-cache":"rm -rf .cache"
   },
   "repository": {
     "type": "git",
