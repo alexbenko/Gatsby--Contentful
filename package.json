@@ -33,7 +33,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "setup": "node ./bin/setup.js",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clear-cache":"rm -rf .cache",
   },
   "repository": {
     "type": "git",
