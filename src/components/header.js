@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import NavItem from './NavItem.jsx';
-import Img from "gatsby-image"
+//import Img from "gatsby-image"
 
 //padding order:top, right, bottom, and left
 //object destructuring
