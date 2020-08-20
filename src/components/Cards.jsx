@@ -8,15 +8,14 @@ const Cards = ()=>{
       allContentfulCard {
         edges {
           node {
+            description {
+              description
+            }
             icon {
               file {
                 url
               }
             }
-            description {
-              description
-              }
-            titles
             header
           }
         }
@@ -26,8 +25,7 @@ const Cards = ()=>{
 
 
     return(
-      <div className="card-section" style={{backgroundColor:'white',display:'flex',flexDirection:'row'}}>
-        {console.log(data.allContentfulCard.edges)}
+      <div className="card-section" style={{display:'flex',flexDirection:'row',marginTop:'-15%',position: 'absolute',zIndex:'-9',}}>
           {data.allContentfulCard.edges.map((card,i)=>{
               return(
               <CardItem data={card} key={i}/>

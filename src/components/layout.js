@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={'Webstacks Jr Front End Dev Take Home'} icon={data.allContentfulNavbar.edges[0].node.navIcon.sizes || data.allContentfulNavbar.edges[0].node.navIcon.file.url} navItems={data.allContentfulNavbar.edges[0].node.navItems.items}/>
-      <div style={{ margin: `0 auto`}}>
+      <div style={{}}>
         <main>{children}</main>
       </div>
     </>

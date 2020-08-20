@@ -24,7 +24,7 @@ class NavItem extends Component{
     };
 
     return(
-      <div className='nav-item' style={{paddingRight:'10%'}} >
+      <div className='nav-item'>
         <h1 style={textStyle} onMouseOver={()=>this.color()}>{this.props.item}</h1>
       </div>
     );
