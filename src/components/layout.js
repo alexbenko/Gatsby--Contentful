@@ -10,6 +10,8 @@
     url
   }
 
+  and instead of the <img> tag use the gatsby-image package <Img fluid={}>
+
   for future reference: https://stackoverflow.com/questions/50007271/how-display-a-contentul-image-with-gatsby
  */
 
@@ -44,7 +46,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={'Webstacks Jr Front End Dev Take Home'} icon={data.allContentfulNavbar.edges[0].node.navIcon.sizes || data.allContentfulNavbar.edges[0].node.navIcon.file.url} navItems={data.allContentfulNavbar.edges[0].node.navItems.items}/>
-      <div style={{}}>
+      <div>
         <main>{children}</main>
       </div>
     </>
