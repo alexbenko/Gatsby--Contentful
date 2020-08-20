@@ -1,16 +1,42 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import CardItem from './CardItem.jsx';
 
-class Cards extends Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return(
-      <div className="card-section" style={{zIndex:'-9'}}>
+const Cards = ()=>{
+    const data = useStaticQuery(graphql`
+    query Cards {
+      allContentfulCard {
+        edges {
+          node {
+            icon {
+              file {
+                url
+              }
+            }
+            description {
+              description
+              }
+            titles
+            header
+          }
+        }
+      }
+    }
+  `);
 
+
+    return(
+      <div className="card-section" style={{backgroundColor:'white',display:'flex',flexDirection:'row'}}>
+        {console.log(data.allContentfulCard.edges)}
+          {data.allContentfulCard.edges.map((card,i)=>{
+              return(
+              <CardItem data={card} key={i}/>
+            )
+          })}
       </div>
-    )
-  }
+    );
 }
+
+
+
+export default Cards
