@@ -25,7 +25,7 @@ const Cards = ()=>{
 
 
     return(
-      <div className="card-section" style={{display:'flex',flexDirection:'row',marginTop:'-15%',position: 'absolute',zIndex:'-9',}}>
+      <div className="card-section" style={{display:'flex',flexDirection:'row',marginTop:'-1%',position: 'absolute',zIndex:'9',justifyContent:'space-evenly',paddingRight:'10%',paddingTop:'8%'}}>
           {data.allContentfulCard.edges.map((card,i)=>{
               return(
               <CardItem data={card} key={i}/>
