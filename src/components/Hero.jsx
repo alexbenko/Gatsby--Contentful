@@ -1,5 +1,6 @@
 import React from 'react';
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
+import Cards from './Cards.jsx';
 
 const Hero = () =>{
   const data = useStaticQuery(graphql`
@@ -37,12 +38,13 @@ const Hero = () =>{
   let subHeader = data.allContentfulHero.nodes[0].subheader;
   let link = data.allContentfulHero.nodes[0].url;
   return(
-    <div style={{padding: '10% 15% 15% 15%',backgroundColor:'#A9A9A9',zIndex:'1'}}>
+    <div style={{padding: '8% 15% 15% 15%',backgroundColor:'#A9A9A9',zIndex:'1',postion:'relative'}}>
       <div className="Hero-Holder" style={{textAlign:'center',color:'white',fontSize:'1em'}}>
         <h1 style={style.header}>{header}</h1>
         <h3 style={{fontSize:'1em'}}>{subHeader}</h3>
         <a href={link} target="_blank" rel="noopener noreferrer"><button style={style.button}>Over To You</button></a>
       </div>
+      <Cards />
     </div>
   )
 };
