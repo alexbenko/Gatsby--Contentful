@@ -8,7 +8,7 @@ import NavItem from './NavItem.jsx';
 const Header = ({ siteTitle,icon,navItems }) => (
   <header style={{background: `white`}}>
     <div style={{display:`flex`,flexDirection:`row`}}>
-        <img style={{maxWidth:'5%',height:'auto'}} src={icon} alt="Little Pic that spruces up the Navigation Bar" style={{paddingLeft:'10%',paddingRight:'20%'}}></img>
+        <img style={{width:'5%',height:'auto'}} src={icon} alt="Little Pic that spruces up the Navigation Bar" style={{paddingLeft:'10%',paddingRight:'20%'}}></img>
         <div className="nav-items-holder" style={{display:`flex`,flexDirection:`row`,padding:'3.5% 10% 0% 20%'}}>
           {navItems.map((item,i)=>{
             return(

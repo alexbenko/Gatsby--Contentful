@@ -9,6 +9,8 @@
   file{
     url
   }
+
+  for future reference: https://stackoverflow.com/questions/50007271/how-display-a-contentul-image-with-gatsby
  */
 
 import React from "react"
