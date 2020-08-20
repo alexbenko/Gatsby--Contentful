@@ -1,12 +1,14 @@
 /**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- *
- *  sizes(maxWidth: 10, maxHeight: 10, quality: 100) {
+ * If I had more time I would research gatsby image and fluid to implement lazy loading for the images
+ * I know this graphQL query is a start
+ * sizes(quality: 100) {
               ...GatsbyContentfulSizes_withWebp
             }
+  instead of :
+
+  file{
+    url
+  }
  */
 
 import React from "react"
